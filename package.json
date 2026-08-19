@@ -1,0 +1,44 @@
+{
+  "name": "realty-nest-db",
+  "version": "1.0.0",
+  "description": "Database for Realty Nest",
+  "repository": {
+    "type": "git",
+    "url": "realty-nest-db"
+  },
+  "license": "MIT",
+  "author": "BD",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc",
+    "start": "npm run compile && node ./dist/index.js",
+    "seed:admin": "npm run compile && node ./dist/scripts/seed-admin.js",
+    "seed:demo": "npm run compile && node ./dist/scripts/seed-demo.js",
+    "verify:audit": "npm run compile && node ./dist/scripts/verify-audit-chain.js",
+    "test:authz": "npm run compile && node ./dist/scripts/test-authz.js",
+    "test:security": "npm run compile && node ./dist/scripts/test-security.js",
+    "check:zdjecia": "npm run compile && node ./dist/scripts/sprawdz-zdjecia.js"
+  },
+  "dependencies": {
+    "@apollo/server": "^5.5.1",
+    "bcryptjs": "^3.0.3",
+    "chalk": "^5.6.2",
+    "dotenv": "^17.4.2",
+    "graphql": "^16.14.2",
+    "jose": "^6.2.3",
+    "mongoose": "^9.7.3",
+    "otplib": "^13.4.1",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.0",
+    "@types/qrcode": "^1.5.6",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  }
+}

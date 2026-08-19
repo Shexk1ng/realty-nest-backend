@@ -1,0 +1,11 @@
+node_modules
+dist
+
+# Environment — never commit real secrets; only the template is tracked.
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+coverage
+*.tsbuildinfo
